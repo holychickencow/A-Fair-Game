@@ -6,18 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
     <title>A Fair Game</title>
 </head>
 <body>
-    <div class="main">
-        <h1 class="title">A Fair Game</h1>
-        <button href="#" class="start"><span></span>Start</button>
+    <div class="main" id="mainPage">
+        <h1 id="title">A Fair Game</h1>
+        <button onclick="startGame()" id="start">Start</button>
         <div class="bottom">
-            <button href="#" class="how"><span></span><span></span><span></span><span></span>How to Play</button>
-            <button href="#" class="settings"><span></span><span></span><span></span><span></span>Settings</button>
+            <button onclick="openHow()">How to Play</button>
+            <button onclick="openSettings()">Settings</button>
         </div>
     </div>
+
+    <div class="settings" id="settingsPage" hidden>
+        <button onclick="openMain()">Back</button>
+    </div>
+
+    <div class="how" id="howPage" hidden>
+        <button onclick="openMain()">Back</button>
+    </div>
+
+    <script src="afg.js"></script>
 </body>
 </html>
